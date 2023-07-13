@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import Logo from "../../images/svg/logo.svg";
 import Home from "../../images/svg/home.svg";
@@ -27,6 +27,26 @@ export const Dash = () => {
     logout();
     navigate("/login");
   };
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 999px)');
+
+    const handleResize = (event) => {
+      if (event.matches) {
+        setSidebarVisible(false);
+      } else {
+        setSidebarVisible(true);
+      }
+    };
+
+    handleResize(mediaQuery);
+
+    mediaQuery.addEventListener('change', handleResize);
+
+    return () => {
+      mediaQuery.removeEventListener('change', handleResize);
+    };
+  }, []);
 
   return (
     <div className="flex flex-col h-screen">
@@ -64,7 +84,7 @@ export const Dash = () => {
       <div className="flex flex-1">
         <div
           className={` ${sidebarVisible
-            ? "fixed inset-0 bg-white px-6 w-full flex flex-col justify-between md:relative md:w-[15%] md:flex md:flex-col md:justify-between z-50"
+            ? "bg-white px-6 w-full flex flex-col justify-between md:relative md:w-[15%] md:flex md:flex-col md:justify-between z-50"
             : "hidden"
             }`}
         >
@@ -73,9 +93,6 @@ export const Dash = () => {
               <p className="font-semibold font-inter text-xs text-agility-gray-color-80">
                 PRINCIPAL
               </p>
-              <div className="flex md:hidden" onClick={toggleSidebar}>
-                X
-              </div>
             </div>
             <div>
               <div>
@@ -96,7 +113,7 @@ export const Dash = () => {
           </div>
         </div>
         <div
-          className={` ${sidebarVisible ? "w-[85%]" : "w-full"
+          className={` ${sidebarVisible ? "w-[85%] " : "w-full"
             } bg-agility-background overflow-auto`}
         >
           <Outlet />
