@@ -6,7 +6,7 @@ import Building from "../images/svg/building.svg";
 import ArrowTop from "../images/svg/arrow-top2.svg";
 import ArrowDown from "../images/svg/arrow-down-red.svg";
 import Minus from "../images/svg/minus-square.svg";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import listCity from "../data/listCity.json"
 
 const data = [];
@@ -89,31 +89,27 @@ export const Main = () => {
                     </div>
                 ))}
             </div>
-            <div className='flex mt-[22px] w-full gap-[30px]'>
-                <div className='basis-[76%] border bg-white shadow-md cursor-pointer rounded-[12px]'>
-                    <div className='flex items-center justify-between py-[15px] px-[20px]'>
-                        <h2 className='text-[#4F4F4F] text-[24px] p-5 leading-[19px] font-bold'>Entrada de clientes - Julho</h2>
-                    </div>
+            <div className="grid lg:grid-cols-4 grid-cols-1 gap-4 mt-6 ">
+                <div className="bg-white md:col-span-3 p-8 shadow-md rounded-[12px]">
+                    <p className="py-4 font-semibold text-2xl text-agility-gray-color-80">
+                        Entrada de clientes - Julho
+                    </p>
 
-                    <div className="w-full">
-                        <LineChart width={1150}
-                            height={500} data={data} margin={{
-                                top: 5,
-                                right: 30,
-                                left: 20,
-                                bottom: 5,
-                            }}>
-                            <CartesianGrid strokeDasharray="3 3" />
-                            <XAxis dataKey="day" />
-                            <YAxis />
-                            <Tooltip />
-                            <Legend />
-                            <Line type="monotone" dataKey="value" name='Entradas de clientes' stroke="#2382A0" />
-                        </LineChart>
+                    <div className="w-auto h-[500px]">
+                        <ResponsiveContainer>
+                            <LineChart data={data} m>
+                                <CartesianGrid strokeDasharray="3 3" />
+                                <XAxis dataKey="day" />
+                                <YAxis />
+                                <Tooltip />
+                                <Legend />
+                                <Line type="monotone" dataKey="value" name='Entradas de clientes' stroke="#2382A0" />
+                            </LineChart>
+                        </ResponsiveContainer>
                     </div>
 
                 </div>
-                <div className="basis-[24%] bg-white p-5 shadow-md cursor-pointer rounded-[12px]">
+                <div className="bg-white p-5 shadow-md rounded-[12px]">
                     <p className=" py-4 font-semibold text-2xl text-agility-gray-color-80">
                         Ranking de cidades
                     </p>

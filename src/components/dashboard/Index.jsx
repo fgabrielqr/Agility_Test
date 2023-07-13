@@ -31,10 +31,10 @@ export const Dash = () => {
   return (
     <div className="flex flex-col h-screen">
       <div className="bg-white py-4 w-full px-6 flex">
-        <div className="w-[15%]">
+        <div className="flex ">
           <img src={Logo} alt="" />
         </div>
-        <div className="w-[85%] flex items-center justify-between">
+        <div className="w-[85%] ml-14 flex items-center justify-between">
           <img src={MenuLeft} alt="" onClick={toggleSidebar} />
           <div className="flex items-center gap-[20px]">
             <div className="flex items-center gap-[25px] border-r-[1px] pr-[25px]"></div>
