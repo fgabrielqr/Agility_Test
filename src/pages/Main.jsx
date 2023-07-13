@@ -7,6 +7,7 @@ import ArrowTop from "../images/svg/arrow-top2.svg";
 import ArrowDown from "../images/svg/arrow-down-red.svg";
 import Minus from "../images/svg/minus-square.svg";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import listCity from "../data/listCity.json"
 
 const data = [];
 for (let i = 1; i <= 30; i++) {
@@ -53,49 +54,6 @@ const list = [
         colorsubtitle: "text-agility-brand-color-red",
         iconsubtitle: ArrowDown,
         value: "134",
-    },
-];
-
-const listCity = [
-    {
-        id: 1,
-        cidade: "Pereiro",
-        montante: "R$ 120.334",
-    },
-    {
-        id: 2,
-        cidade: "São Miguel",
-        montante: "R$ 114.423",
-    },
-    {
-        id: 3,
-        cidade: "Jaguaribe",
-        montante: "R$ 112.781",
-    },
-    {
-        id: 4,
-        cidade: "Icó",
-        montante: "R$ 109.988",
-    },
-    {
-        id: 5,
-        cidade: "Iguatu",
-        montante: "R$ 107.326",
-    },
-    {
-        id: 6,
-        cidade: "Cedro",
-        montante: "R$ 102.454",
-    },
-    {
-        id: 7,
-        cidade: "Lavras da Mangabeira",
-        montante: "R$ 90.760",
-    },
-    {
-        id: 8,
-        cidade: "Juazeiro do Norte",
-        montante: "R$ 90.750",
     },
 ];
 

@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "cidade": "Pereiro",
+    "montante": "R$ 120.334"
+  },
+  {
+    "id": 2,
+    "cidade": "São Miguel",
+    "montante": "R$ 114.423"
+  },
+  {
+    "id": 3,
+    "cidade": "Jaguaribe",
+    "montante": "R$ 112.781"
+  },
+  {
+    "id": 4,
+    "cidade": "Icó",
+    "montante": "R$ 109.988"
+  },
+  {
+    "id": 5,
+    "cidade": "Iguatu",
+    "montante": "R$ 107.326"
+  },
+  {
+    "id": 6,
+    "cidade": "Cedro",
+    "montante": "R$ 102.454"
+  },
+  {
+    "id": 7,
+    "cidade": "Lavras da Mangabeira",
+    "montante": "R$ 90.760"
+  },
+  {
+    "id": 8,
+    "cidade": "Juazeiro do Norte",
+    "montante": "R$ 90.750"
+  }
+]
