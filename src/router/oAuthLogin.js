@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/authContext";
 
-const GuestGuard = ({ children }) => {
+const OAuthLogin = ({ children }) => {
   const auth = useAuth();
   const navigate = useNavigate();
 
@@ -15,4 +15,4 @@ const GuestGuard = ({ children }) => {
   return <>{children}</>;
 };
 
-export default GuestGuard;
+export default OAuthLogin;

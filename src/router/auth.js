@@ -8,7 +8,7 @@ const Auth = ({ children }) => {
 
   useEffect(() => {
     if (!auth.user) {
-      navigate("/", { replace: true });
+      navigate("/login", { replace: true });
     }
   }, [auth, navigate]);
 
